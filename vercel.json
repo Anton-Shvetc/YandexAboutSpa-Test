@@ -1,16 +1,17 @@
 {
   "version": 2,
   "builds": [
-    { "src": "server.js", "use": "@vercel/node" }
-  ],
-  "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": "server.js"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/build/index.html"
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "build" }
     }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "headers": { "cache-control": "s-maxage=31536000,immutable" }
+    },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
