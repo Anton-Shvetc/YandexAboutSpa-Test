@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import { Button, TextField, Typography } from "@mui/material";
 import "./Login.css";
 
 async function loginUser(credentials) {
@@ -27,21 +28,24 @@ export default function Login({ setToken }) {
 
   return (
     <div className="login-wrapper">
-      <h1>Please Log In</h1>
+      <Typography variant="h5">Пожалуйста авторизуйтесь</Typography>
       <form onSubmit={handleSubmit}>
         <label>
-          <p>Username</p>
-          <input type="text" onChange={(e) => setUserName(e.target.value)} />
+          <Typography>Логин:</Typography>
+          <TextField
+            type="text"
+            onChange={(e) => setUserName(e.target.value)}
+          />
         </label>
         <label>
-          <p>Password</p>
-          <input
+          <Typography>Пароль</Typography>
+          <TextField
             type="password"
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
         <div>
-          <button type="submit">Submit</button>
+          <Button type="submit">Подтвердить</Button>
         </div>
       </form>
     </div>

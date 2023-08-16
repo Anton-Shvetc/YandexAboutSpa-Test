@@ -17,7 +17,7 @@ function Navigation() {
   };
 
   const pages = [
-    { name: "Домой", link: "/" },
+    { name: "Главная", link: "/" },
     { name: "Обо мне", link: "/about" },
     { name: "Полезные ссылки", link: "/optional" },
   ];
