@@ -20,6 +20,7 @@ function Navigation() {
     { name: "Главная", link: "/" },
     { name: "Обо мне", link: "/about" },
     { name: "Полезные ссылки", link: "/optional" },
+    { name: "Бонус", link: "/bonus" },
   ];
   return (
     <AppBar position="static">

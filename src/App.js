@@ -5,11 +5,12 @@ import Navigation from "./components/Navigation";
 import NotFoundPage404 from "./pages/NotFoundPage404";
 import HomePage from "./pages/HomePage";
 import OptionalInfoPage from "./pages/OptionalInfoPage";
+import JsPowerPage from "./pages/JsPowerPage";
 import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
-    <div className="wrapper">
+    <>
       <BrowserRouter>
         <header>
           <Navigation />
@@ -19,10 +20,11 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/optional" element={<OptionalInfoPage />} />
+          <Route path="/bonus" element={<JsPowerPage />} />
           <Route path="*" element={<NotFoundPage404 />} />
         </Routes>
       </BrowserRouter>
-    </div>
+    </>
   );
 }
 
