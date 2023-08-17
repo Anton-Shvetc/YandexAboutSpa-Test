@@ -2,19 +2,11 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import MenuItem from "@mui/material/MenuItem";
-import useToken from "./useToken";
 
 function Navigation() {
-  const { token, setToken } = useToken();
-
-  const logout = () => {
-    sessionStorage.removeItem("token");
-    setToken({});
-  };
 
   const pages = [
     { name: "Главная", link: "/" },
