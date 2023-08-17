@@ -10,6 +10,15 @@ app.use("/api/login", (req, res) => {
   });
 });
 
+app.use(express.json());
+
+app.post("/api/register", (req, res) => {
+  const { username, password } = req.body;
+
+  res.send({
+    message: "Пользователь успешно зарегистрирован",
+  });
+});
 
 
 const port = process.env.PORT || 8080;

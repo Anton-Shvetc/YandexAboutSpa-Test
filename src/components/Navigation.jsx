@@ -48,7 +48,9 @@ function Navigation() {
               )}
             </MenuItem>
             <MenuItem>
-              <Typography textAlign="center">Регистрация</Typography>
+              <Link href="/registration" color="inherit">
+                Регистрация
+              </Link>
             </MenuItem>
           </Box>
         </Toolbar>

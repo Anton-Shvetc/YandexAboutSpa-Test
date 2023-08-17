@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage";
 import OptionalInfoPage from "./pages/OptionalInfoPage";
 import JsPowerPage from "./pages/JsPowerPage";
 import LoginPage from "./pages/LoginPage";
+import RegistrationPage from "./pages/RegistrationPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/registration" element={<RegistrationPage />} />
           <Route path="/optional" element={<OptionalInfoPage />} />
           <Route path="/bonus" element={<JsPowerPage />} />
           <Route path="*" element={<NotFoundPage404 />} />
