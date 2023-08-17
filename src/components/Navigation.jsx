@@ -35,22 +35,6 @@ function Navigation() {
               </MenuItem>
             ))}
           </Box>
-          <Box sx={{ display: "flex" }}>
-            <MenuItem>
-              {!token ? (
-                <Link href="/login" color="inherit">
-                  Вход
-                </Link>
-              ) : (
-                <Link href="/" color="inherit" onClick={logout}>
-                  Выход
-                </Link>
-              )}
-            </MenuItem>
-            <MenuItem>
-              <Typography textAlign="center">Регистрация</Typography>
-            </MenuItem>
-          </Box>
         </Toolbar>
       </Container>
     </AppBar>
